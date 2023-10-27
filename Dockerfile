@@ -11,7 +11,7 @@ ADD Makefile .
 RUN make install
 ADD . .
 
-ENV MONGO_DBNAME nozama-cloudsearch
+ENV MONGO_DBNAME local-cloudsearch
 ENV MONGO_HOST 127.0.0.1
 ENV MONGO_PORT 27017
 ENV ELASTICSEARCH_HOST 127.0.0.1
