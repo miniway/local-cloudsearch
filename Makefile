@@ -13,11 +13,11 @@ clean:
 	find . -iname '*.pyc' -exec rm {} \; -print
 
 install:
-	pip install -r requirements.txt
-	python setup.py develop
+	pip3 install -r requirements.txt
+	python3 setup.py develop
 
 test_install: install
-	pip install -r test-requirements.txt
+	pip3 install -r test-requirements.txt
 
 docker_build: clean
 	docker build \
@@ -68,7 +68,7 @@ run:
 	pserve development.ini
 
 test_pypi_release:
-	pip install twine
+	pip3 install twine
 	python3 setup.py sdist bdist_wheel
 	twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 

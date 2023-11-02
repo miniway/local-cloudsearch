@@ -1,5 +1,5 @@
 # base set for both test and service images:
-FROM python:3-slim as build
+FROM python:3.11.6-slim as build
 WORKDIR /app
 RUN apt-get update && apt-get install -y make
 ADD README.rst .
